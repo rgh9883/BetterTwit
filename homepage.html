@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <link href="homepage.css" rel="stylesheet" type="text/css" />
+    <script src="homepage.js"></script>
+</head>
+<body onload="setID(); loadPostsFetch(); getProfile()">
+<div class="profile">
+    <a id="profileLink" href=""><h1 id="username">Temp Username</h1></a>
+    <button id="onlyFollowing" type="button" class="btn btn-secondary pages" onclick="followingOnly()">View Only Following</button>
+    <button id="logOut" type="button" class="btn btn-secondary pages" onclick="logout()">Log Out</button>
+</div>
+<div class="container">
+    <div id="addPost">
+        <div class="input-group">
+            <textarea class="form-control" aria-label="With textarea" rows="5" maxlength="250" id="postBox"></textarea>
+            <span class="input-group-text"><button id="addPostBut" type="button" class="btn btn-secondary" onclick="post()">Post</button></span>
+        </div>
+    </div><br><br>
+    <div id="posts">
+    </div>
+    <button id="previousPage" type="button" class="btn btn-secondary pages" onclick="pagePrevious()" disabled>Previous Page</button>
+    <button id="nextPage" type="button" class="btn btn-secondary pages" onclick="pageNext()">Next Page</button>
+</div>
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <img src="Peter_Griffin.png" class="rounded me-2" alt="Peter">
+            <strong class="me-auto"></strong>
+            <small></small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            <span id="alertText">You already Liked that Post!</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

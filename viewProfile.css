@@ -1,0 +1,22 @@
+#userName{
+    font-size: 200px;
+}
+
+.container{
+    position: absolute;
+    height: auto;
+    width: auto;
+}
+
+.child{
+    position: absolute;
+    left: 100%;
+    top: 30%;
+    margin-left: 10px;
+    width: 10vw;
+}
+
+#homepage{
+    position: absolute;
+    margin: 5px;
+}
